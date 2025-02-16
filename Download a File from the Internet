@@ -1,0 +1,8 @@
+import requests
+
+# Download a File from the Internet
+
+url = "https://example.com/file.zip"
+response = requests.get(url)
+with open ("file.zip", "wb") as f:
+  f.write(response.content)
