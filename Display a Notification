@@ -1,4 +1,6 @@
-from plyer import noyification
+# pip install plyer
+
+from plyer import notification
 
 # Display a notification
 
