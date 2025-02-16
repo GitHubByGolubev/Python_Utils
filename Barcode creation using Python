@@ -1,3 +1,5 @@
+# pip install python-barcode
+
 import barcode
 from barcode.writer import ImageWriter
 from IPython.display import Image, dispaly
