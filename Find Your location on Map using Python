@@ -1,1 +1,22 @@
+# pip install folium geopy
+
+import folium
+from geopy.geocoders import Nominatim
+
 # Find Your location on Map using Python
+
+geolocator = Nominatium(user_agent="my_geocoder_app")
+address = input("Enter an address to map: ")
+
+location = geolocator.geocode(address)
+if location:
+  lat, lon = location.latitude, location.longitude
+else:
+  print("Address not found. Defaulting to White House.")
+  lat, lon = 38.8977, -77.0365
+
+m = folium.Map(location=[lat, lon], zoom_start=15)
+folium.Marker(
+  location=[lat, lon],
+  popup=f"{address}",
+  icon=folium.Icon(color="blue")).add_to(m)
