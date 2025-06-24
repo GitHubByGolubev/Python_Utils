@@ -1,0 +1,7 @@
+# pip install langdetect
+
+from langdetect import detect, DetectorFactory
+DetectorFactory.seed = 0
+text = input("Enter a senetence to detect: ")
+detected_language = detect(text)
+print("The detected language is: {detected_language}")
